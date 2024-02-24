@@ -66,7 +66,7 @@
 | 63 | [Iceberg](https://modrinth.com/mod/iceberg) | Grend | A modding library that contains new events, helpers, and utilities to make modder's lives easier. | 787,785 | mod |
 | 64 | [ImmediatelyFast](https://modrinth.com/mod/immediatelyfast) | RaphiMC | Speed up immediate mode rendering in Minecraft | 1,666,459 | mod |
 | 65 | [Indium](https://modrinth.com/mod/indium) | comp500 | Sodium addon providing support for the Fabric Rendering API, based on Indigo | 2,182,967 | mod |
-| 66 | [Iris](https://modrinth.com/mod//) | / | A modern shaders mod for Minecraft intended to be compatible with existing OptiFine shader packs | / | mod |
+| 66 | Iris| coderbot, IMS212, Justsnoopy30, FoundationGames | A modern shaders mod for Minecraft intended to be compatible with existing OptiFine shader packs | / | mod |
 | 67 | [Krypton](https://modrinth.com/mod/krypton) | astei | A mod to optimize the Minecraft networking stack | 1,488,022 | mod |
 | 68 | [Ksyxis](https://modrinth.com/mod/ksyxis) | VidTu | Speed up the loading of your world. | 191,266 | mod |
 | 69 | [LambDynamicLights](https://modrinth.com/mod/lambdynamiclights) | LambdAurora | A dynamic lights mod for Fabric. | 1,785,582 | mod |

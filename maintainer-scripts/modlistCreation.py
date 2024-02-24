@@ -17,7 +17,7 @@ try:
             self.downloadCount = downloads
             self.link = 'https://modrinth.com/' + pr_type + '/' + slug
             self.project_type = pr_type
-            self.markdownRow = f'| [{self.name}]({self.link}) | {self.authorsList} | {self.desc} | {self.downloadCount} | {self.project_type} |\n'
+            self.markdownRow = f'| [{self.name}]({self.link}) '+ f'| {self.authorsList} | {self.desc} | {self.downloadCount} | {self.project_type} |\n' if slug != '/' else f'| {self.name}' + f'| {self.authorsList} | {self.desc} | {self.downloadCount} | {self.project_type} |\n'
 
     def getInfo(project_value, wantedInfo):
         try:
@@ -41,7 +41,7 @@ try:
                 for member in project_value['metadata']['members']:
                     authorsList.append(member['user']['username'])
             except:
-                authorsList = getInfo(project_value, 'authorsList')
+                authorsList = getInfo(project_value, 'authors')
                 
             authors = ', '.join(authorsList)
                 
