@@ -84,7 +84,7 @@ try:
             
         markdown = header
         for index, content in enumerate(contents):
-            markdown += f'| {index + 1} | {content.name} | {content.authorsList} | {content.desc} | {content.downloadCount} | {content.project_type} |\n'
+            markdown += f'| {index + 1} ' + content.markdownRow
             
         return markdown
 
