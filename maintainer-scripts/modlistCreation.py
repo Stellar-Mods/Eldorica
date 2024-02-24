@@ -7,17 +7,17 @@ import sys
 
 try:
     modrinthConfig_path = input("Modrinth profile path: ") + "\profile.json"
-    header = ['', 'Project Name', 'Authors', 'Desciption', 'Downloads', 'Project Type']
+    header = ['', 'Project Name', 'authorsList', 'Desciption', 'Downloads', 'Project Type']
 
     class Content:
-        def __init__(self, name, description, authors, downloads, slug, pr_type):
+        def __init__(self, name, description, authorsList, downloads, slug, pr_type):
             self.name = name
             self.desc = description
-            self.authors = authors
+            self.authorsList = authorsList
             self.downloadCount = downloads
             self.link = 'https://modrinth.com/' + pr_type + '/' + slug
             self.project_type = pr_type
-            self.markdownRow = f'| [{self.name}]({self.link}) | {self.authors} | {self.desc} | {self.downloadCount} | {self.project_type} |\n'
+            self.markdownRow = f'| [{self.name}]({self.link}) | {self.authorsList} | {self.desc} | {self.downloadCount} | {self.project_type} |\n'
 
     def getInfo(project_value, wantedInfo):
         try:
@@ -36,12 +36,14 @@ try:
         
         print('Extracting data from profile.json.')
         for project_key, project_value in data["projects"].items():
-            authors = []
+            authorsList = []
             try:
                 for member in project_value['metadata']['members']:
-                    authors.append(member['user']['username'])
+                    authorsList.append(member['user']['username'])
             except:
-                authors = getInfo(project_value, 'authors')
+                authorsList = getInfo(project_value, 'authorsList')
+                
+            authors = ', '.join(authorsList)
                 
             name = getInfo(project_value, 'title')
             desc = getInfo(project_value, 'description').replace("\n", "")
@@ -82,7 +84,7 @@ try:
             
         markdown = header
         for index, content in enumerate(contents):
-            markdown += f'| {index + 1} | {content.name} | {content.authors} | {content.desc} | {content.downloadCount} | {content.project_type} |\n'
+            markdown += f'| {index + 1} | {content.name} | {content.authorsList} | {content.desc} | {content.downloadCount} | {content.project_type} |\n'
             
         return markdown
 
