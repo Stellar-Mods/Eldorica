@@ -20,10 +20,10 @@ class Content:
 
 def getInfo(project_value, wantedInfo):
     try:
-        return project_value["metadata"]["project"][wantedInfo]
+        return project_value["metadata"]["project"][wantedInfo].replace("\n", "")
     except:
         try:
-            return project_value["metadata"][wantedInfo]
+            return project_value["metadata"][wantedInfo].replace("\n", "")
         except:
             return '/'
         
