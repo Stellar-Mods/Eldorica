@@ -5,7 +5,7 @@ import sys
 import platform
 
 try:
-    header = ['', 'Project Name', 'Authors', 'Desciption', 'Downloads', 'Project Type']
+    header = ['', 'Project Name', 'Authors', 'Desciption', 'Downloads']
 
     class Content:
             def __init__(self, name, description, authorsList, downloads, slug, pr_type):
@@ -15,7 +15,7 @@ try:
                 self.downloadCount = downloads
                 self.link = 'https://modrinth.com/' + pr_type + '/' + slug
                 self.project_type = pr_type
-                self.markdownRow = f'| [{self.name}]({self.link}) '+ f'| {self.authorsList} | {self.desc} | {self.downloadCount} | {self.project_type} |\n' if slug != '/' else f'| {self.name}' + f'| {self.authorsList} | {self.desc} | {self.downloadCount} | {self.project_type} |\n'
+                self.markdownRow = f'| [{self.name}]({self.link}) '+ f'| {self.authorsList} | {self.desc} | {self.downloadCount} |\n' if slug != '/' else f'| {self.name}' + f'| {self.authorsList} | {self.desc} | {self.downloadCount} | {self.project_type} |\n'
 
     def getModrinthConfigPath():
         osName = platform.system()
