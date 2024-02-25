@@ -5,7 +5,7 @@ import sys
 import platform
 
 try:
-    header = ['', 'Project Name', 'authorsList', 'Desciption', 'Downloads', 'Project Type']
+    header = ['', 'Project Name', 'Authors', 'Desciption', 'Downloads', 'Project Type']
 
     class Content:
             def __init__(self, name, description, authorsList, downloads, slug, pr_type):

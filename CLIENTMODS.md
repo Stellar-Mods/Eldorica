@@ -1,7 +1,7 @@
 # Client Pack
 
 ## Mods
-|  | Project Name | authorsList | Desciption | Downloads | Project Type |
+|  | Project Name | Authors | Desciption | Downloads | Project Type |
 |---|---|---|---|---|---|
 | 1 | [3D Skin Layers](https://modrinth.com/mod/3dskinlayers) | tr7zw | Render the player skin layer in 3d! | 1,295,878 | mod |
 | 2 | [Advanced UI Scaling](https://modrinth.com/mod/advanced-ui-scale) | qendolin | Improves Minecraft's GUI Scaling! | 4,948 | mod |
@@ -118,14 +118,14 @@
 | 113 | [kennytvs-epic-force-close-loading-screen-mod-for-fabric](https://modrinth.com/mod/forcecloseworldloadingscreen) | kennytv | Instantly closes the loading terrain screen on world changing and drastically reduces the resource pack loading screen duration | 215,844 | mod |
 
 ## Shaders
-|  | Project Name | authorsList | Desciption | Downloads | Project Type |
+|  | Project Name | Authors | Desciption | Downloads | Project Type |
 |---|---|---|---|---|---|
 | 1 | [Complementary Shaders - Reimagined](https://modrinth.com/shader/complementary-reimagined) | EminGT | Exceptional quality, detail and performance; while preserving the unique visuals of Minecraft. | 1,051,372 | shader |
 | 2 | [Rethinking Voxels](https://modrinth.com/shader/rethinking-voxels) | gri573 | [WIP] A gameplay shaderpack based on complementary reimagined that has coloured block light with sharp shadows | 706,523 | shader |
 | 3 | [Soft Voxels Lite](https://modrinth.com/shader/soft-voxels-lite) | RRe36 | A minimalistic and performant path-traced shaderpack. | 86,575 | shader |
 
 ## Resource packs
-|  | Project Name | authorsList | Desciption | Downloads | Project Type |
+|  | Project Name | Authors | Desciption | Downloads | Project Type |
 |---|---|---|---|---|---|
 | 1 | [Embrace Pixels](https://modrinth.com/resourcepack/embrace-pixels) | Mwti | True 16x Default PBR | 21,201 | resourcepack |
 | 2 | [Fresh Animations](https://modrinth.com/resourcepack/fresh-animations) | FreshLX | Make your game like the trailers! Dynamic animated entities to freshen your Minecraft experience. | 265,075 | resourcepack |
