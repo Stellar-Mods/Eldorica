@@ -28,10 +28,12 @@ def modlistCreation(folderName, packType):
                     modrinthPath = os.path.expanduser('~/Library/Application Support/com.modrinth.theseus/profiles')
                 elif osName == 'Linux':
                     modrinthPath = os.path.expanduser('~/.config/com.modrinth.theseus/profiles')
+                    
                 if folderName == None:    
                     profileName = input('Please right click your profile and paste "Path" here: ')
                 else:
                     profileName = folderName
+                    
                 modrinthConfigPath = modrinthPath + os.path.sep + profileName + os.path.sep + 'profile.json'
             except:
                 modrinthPath = input('Unknown os, please manually paste your path to your modrinth profile here: ')
@@ -40,7 +42,7 @@ def modlistCreation(folderName, packType):
             
         def readJson(modrinthConfig_path):
             try:
-                with open(modrinthConfig_path, encoding='utf-8') as config:
+                with open(modrinthConfig_path, 'r', encoding='utf-8') as config:
                         data = json.load(config)
                         
                 return data
@@ -134,7 +136,7 @@ def modlistCreation(folderName, packType):
                 return output_path
                     
         def saveMd(outputPath, contentType, markdown):
-            print('Saving file ...')
+            print('Saving modlist file ...')
             with open(f'{outputPath}{os.path.sep}{contentType.upper()}MODS.md', 'w', encoding='utf-8') as f:
                 f.write(markdown)
                 
@@ -171,10 +173,11 @@ def modlistCreation(folderName, packType):
         outputPath = outputPath()
         saveMd(outputPath, contentType, markdown)
 
-        return modrinthCofigPath        
+        return modrinthCofigPath, contentType
     except Exception as e:
         print("An error occurred:", e)
         input("Press enter to quit")
-        
+'''        
 if __name__ == '__main__':
     modlistCreation()
+'''
