@@ -4,7 +4,7 @@ import os
 import sys
 import platform
 
-def modlistCreation():
+def modlistCreation(folderName, packType):
     try:
         header = ['', 'Project Name', 'Authors', 'Desciption', 'Downloads']
 
@@ -28,8 +28,10 @@ def modlistCreation():
                     modrinthPath = os.path.expanduser('~/Library/Application Support/com.modrinth.theseus/profiles')
                 elif osName == 'Linux':
                     modrinthPath = os.path.expanduser('~/.config/com.modrinth.theseus/profiles')
-                    
-                profileName = input('Please right click your profile and paste "Path" here: ')
+                if folderName == None:    
+                    profileName = input('Please right click your profile and paste "Path" here: ')
+                else:
+                    profileName = folderName
                 modrinthConfigPath = modrinthPath + os.path.sep + profileName + os.path.sep + 'profile.json'
             except:
                 modrinthPath = input('Unknown os, please manually paste your path to your modrinth profile here: ')
@@ -50,7 +52,10 @@ def modlistCreation():
             md_hd = ''
             mod_type = None
             if prtype == 'mods':
-                mod_type = input('Are these server mods or client mods? (Enter "server" or "client"): ')
+                if packType == None:
+                    mod_type = input('Is this a client or server pack? (Enter "server" or "client"): ')
+                else:
+                    mod_type = packType
                 md_hd = f'# {mod_type.capitalize()} Pack\n' if mod_type.lower() == 'server' or mod_type.lower() == 'client' else None
                 
                 if md_hd == None:
