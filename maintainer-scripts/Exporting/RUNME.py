@@ -5,7 +5,7 @@ import json
 
 def readSettingsFile():
     try:
-        with open("settings.json", 'r', encoding='utf-8') as settingsFile:
+        with open("ScriptExportSettings.json", 'r', encoding='utf-8') as settingsFile:
                 df = json.load(settingsFile)      
         modrinthCofigPath = df['ModrinthFolderName']
         packType = df['PackType']
@@ -42,7 +42,7 @@ if usedSettings == False:
     if save:
         settings = {"ModrinthFolderName": profileName, "PackType": packType}
         print('Saving settings file ...')
-        with open('settings.json', 'w') as settingsFile:
+        with open('ScriptExportSettings.json', 'w') as settingsFile:
             json.dump(settings, settingsFile)
 
 prepareExport(folderPath)
