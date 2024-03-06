@@ -128,6 +128,7 @@ def modlistCreation(folderName, packType):
                 output_path = os.path.dirname(os.path.realpath(sys.argv[0]))
                 path_components = output_path.split(os.path.sep)
                 path_components.pop()
+                path_components.pop()
                 output_path = os.path.sep.join(path_components)
                 # Check if the output path exists
                 if not os.path.exists(output_path):
@@ -156,7 +157,15 @@ def modlistCreation(folderName, packType):
                     unknown.append(content)
                     
             return mods, shaders, resourcePacks, unknown
+         
+        def getContentNamesList(contents):
+                    names = []
+                    for item in contents:
+                        names.append(item.name)
                 
+                    return names
+                    
+                    
         modrinthCofigPath = getModrinthConfigPath()
 
         markdownHeader, contentType = mdHeader(header, 'mods')
@@ -173,7 +182,9 @@ def modlistCreation(folderName, packType):
         outputPath = outputPath()
         saveMd(outputPath, contentType, markdown)
 
-        return modrinthCofigPath, contentType
+        namesList = getContentNamesList(contents)
+
+        return modrinthCofigPath, contentType, namesList
     except Exception as e:
         print("An error occurred:", e)
         input("Press enter to quit")

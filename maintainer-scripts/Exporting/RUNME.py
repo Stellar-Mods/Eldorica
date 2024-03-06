@@ -1,11 +1,13 @@
 from modlistCreation import modlistCreation
 from prepareExport import prepareExport
+from changelogCreation import changelogCreation
 import os
 import json
+import sys
 
-def readSettingsFile():
+def readSettingsFile(settingsPath):
     try:
-        with open("ScriptExportSettings.json", 'r', encoding='utf-8') as settingsFile:
+        with open(f"{settingsPath}ExportScriptSettings.json", 'r', encoding='utf-8') as settingsFile:
                 df = json.load(settingsFile)      
         modrinthCofigPath = df['ModrinthFolderName']
         packType = df['PackType']
@@ -30,19 +32,24 @@ def saveOptions():
         print(f'{save} is not an option choose between: y, yes, n, no')
         saveOptions()
     return save          
-    
-folderName, packType, usedSettings = readSettingsFile()
 
-modrinthCofigPath, packType = modlistCreation(folderName, packType) 
+scriptFolderPath = os.path.dirname(os.path.realpath(sys.argv[0])) + os.path.sep + 'scriptData' + os.path.sep
+ 
+folderName, packType, usedSettings = readSettingsFile(scriptFolderPath)
+version = input('Modpack Version: v. ')
+
+modrinthCofigPath, packType, namesList = modlistCreation(folderName, packType)
 folderPath = modrinthCofigPath.split(os.path.sep)[:-1]# Get profile.json path and remove profile.json and turn el in list
 profileName = folderPath[-1]
+
+changelogCreation(namesList, profileName, version, scriptFolderPath)
 
 if usedSettings == False:
     save = saveOptions()
     if save:
         settings = {"ModrinthFolderName": profileName, "PackType": packType}
         print('Saving settings file ...')
-        with open('ScriptExportSettings.json', 'w') as settingsFile:
+        with open(f'{scriptFolderPath}ExportScriptSettings.json', 'w') as settingsFile:
             json.dump(settings, settingsFile)
 
 prepareExport(folderPath)
