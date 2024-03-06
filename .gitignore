@@ -1,2 +1,3 @@
-maintainer-scripts/Exporting/__pycache__
-maintainer-scripts/Sync/__pycache__
+
+*.pyc
+/maintainer-scripts/Exporting/__pycache__
