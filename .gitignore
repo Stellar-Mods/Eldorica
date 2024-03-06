@@ -1,0 +1,3 @@
+
+*.pyc
+/maintainer-scripts/Exporting/__pycache__

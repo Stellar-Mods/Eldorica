@@ -1,0 +1,244 @@
+# Eldorica Changlog
+
+## v0.0.1-Pre-Alpha
+### Added Contents
+- CameraOverhaul
+- CompleteConfig
+- Not Enough Animations
+- Puzzles Lib
+- Tool Stats
+- voxy
+- Your Options Shall Be Respected (YOSBR)
+- Double Doors
+- Smooth Scrolling
+- Villager Names
+- Mixin Conflict Helper
+- Dynamic FPS
+- BCLib
+- LiLaC
+- DashLoader
+- M.R.U
+- Blur (Fabric)
+- Fabrishot
+- Item Highlighter
+- Skip Transitions
+- Mouse Wheelie
+- MidnightLib
+- Advanced UI Scaling
+- Tough As Nails
+- Bountiful
+- Traveler's Backpack
+- Better Advancements
+- FancyMenu
+- FastQuit
+- BSL Shaders
+- Spawn Animations
+- Complementary Shaders - Reimagined
+- ModernFix
+- Pixel Perfect
+- Tectonic
+- Moonlight Lib
+- [EMF] Entity Model Features
+- YUNG's Better Nether Fortresses
+- oωo (owo-lib)
+- Villager Pickup
+- Axolotl Buckets
+- Better Mount HUD
+- Bliss Shaders
+- Collective
+- Indium
+- Bookshelf
+- Embrace Pixels
+- Terralith
+- Fresh Animations
+- More Chat History
+- CreativeCore
+- Explorify
+- More Culling Extra
+- Prism
+- Just Enough Items
+- Better Statistics Screen
+- Fabric API
+- Searchables
+- Geckolib
+- SuperMartijn642's Core Lib
+- Architectury API
+- Soft Voxels Lite
+- Enhanced Block Entities
+- WTHIT
+- RightClickHarvest
+- CIT Resewn
+- Chat Notify
+- Raised
+- Enchanted Vertical Slabs
+- 3D Skin Layers
+- Chunks fade in
+- Capes
+- OptiGUI
+- Areas
+- MixinTrace
+- Panorama Screens
+- Sodium
+- Rethinking Voxels
+- Concurrent Chunk Management Engine (Fabric)
+- Controlling
+- Konkrete
+- Here be no Dragons!
+- More Mobs
+- Language Reload
+- Wavey Capes
+- Mine Treasure
+- Fabric Language Kotlin
+- ChatNotify
+- Shulker Box Tooltip
+- More Culling
+- Controlify
+- Drip Sounds (Fabric)
+- YUNG's Bridges
+- Advancement Plaques
+- Sodium Extra
+- YUNG's Better Witch Huts
+- Memory Leak Fix
+- Craftify
+- Enchantment Descriptions
+- Lithium
+- Cherished Worlds
+- Very Many Players (Fabric)
+- Random Village Names
+- Shrimple
+- Detail Armor Bar
+- YUNG's Better Strongholds
+- AmbientSounds
+- CraterLib
+- JamLib
+- bad packets
+- Amecs
+- WI Zoom
+- Mouse Tweaks
+- Third Person Maps
+- FabricSkyBoxes Interop
+- Hat List
+- YUNG's Better Desert Temples
+- Stack Refill
+- TriQue API
+- TerraBlender
+- Better Ping Display [Fabric]
+- Warden Tools
+- Alternate Current
+- kennytvs-epic-force-close-loading-screen-mod-for-fabric
+- Iceberg
+- Additional Structures
+- Enhanced Attack Indicator
+- Mod Menu
+- Additional Lanterns
+- JourneyMap
+- Tool Trims
+- Fabric Waystones
+- Cristel Lib
+- Dynamic Music Updated
+- Draggable Lists
+- Deeper and Darker
+- [ETF] Entity Texture Features
+- Friends&Foes - Flowery Mooblooms (Fabric/Quilt)
+- Chunky
+- Infinite Music
+- Extended Enchanting
+- ClearDespawn
+- Glowing Armor Trims
+- FerriteCore
+- Dynamic Crosshair
+- Show Me Your Skin!
+- AppleSkin
+- Log Cleaner
+- GlitchCore
+- BedrockWaters
+- VillagersPlus
+- Entity Culling
+- Cave Dust
+- Iris Shaders
+- BisectHosting Server Integration Menu
+- Mob Captains
+- Nullscape
+- ChoiceTheorem's Overhauled Village
+- Sound Physics Remastered
+- ThreadTweak
+- Ugly Scoreboard Fix
+- Traveler's Titles
+- Gamma Utils (Fullbright)
+- Krypton
+- Stylish Effects
+- Clumps
+- Equipment Compare
+- Cardinal Components API
+- Kappa Shader
+- Clean F3
+- Regions Unexplored
+- Wakes
+- YUNG's Better Ocean Monuments
+- YetAnotherConfigLib
+- Simple Discord RPC
+- Forge Config API Port
+- Make Bubbles Pop
+- More Axolotl Variants API
+- Reimagined GUI (Dark)
+- Universal Graves
+- Continuity
+- Visuality
+- xali's Enhanced Vanilla
+- BetterNether
+- ClickThrough
+- Friends&Foes (Fabric/Quilt)
+- ImmediatelyFast
+- FastAnim
+- YUNG's Better Dungeons
+- FabricSkyboxes
+- Bosses of Mass Destruction
+- Resourcify
+- Custom Splash Screen
+- Lootr
+- Nice Mob Variants (Advancements & Boss Mob Update)
+- Drippy Loading Screen
+- Lithostitched
+- Model Gap Fix
+- Bobby
+- Remove Reloading Screen
+- Elytra Trims
+- Explosive Enhancement
+- Noisium
+- YUNG's Extras
+- Dungeons and Taverns
+- Cloth Config API
+- Nvidium
+- Additional Armoury
+- Eating Animation
+- YUNG's API
+- Eden Ring Reforked
+- True Ending: Ender Dragon Overhaul
+- Borderless Mining
+- YUNG's Better Mineshafts
+- Auth Me
+- Falling Leaves
+- Trade Cycling
+- Hopo Better Ruined Portals
+- Motschen's Better Leaves
+- Shimmer
+- Guard Villagers (Fabric/Quilt)
+- LambDynamicLights
+- Comforts
+- Solas Shader
+- Towns and Towers
+- e4mc
+- Better Taskbar
+- Combat+ Core
+- BetterEnd
+- Exordium
+- Smarter Farmers (farmers replant)
+- Animatica
+- Better Third Person
+- YUNG's Better Jungle Temples
+- More Axolotl Variants Mod
+- Legendary Tooltips
+- Presence Footsteps
+- Melody
+- Reese's Sodium Options
+### No removed content

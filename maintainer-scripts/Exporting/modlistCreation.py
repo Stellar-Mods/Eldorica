@@ -4,7 +4,7 @@ import os
 import sys
 import platform
 
-def modlistCreation():
+def modlistCreation(folderName, packType):
     try:
         header = ['', 'Project Name', 'Authors', 'Desciption', 'Downloads']
 
@@ -29,7 +29,11 @@ def modlistCreation():
                 elif osName == 'Linux':
                     modrinthPath = os.path.expanduser('~/.config/com.modrinth.theseus/profiles')
                     
-                profileName = input('Please right click your profile and paste "Path" here: ')
+                if folderName == None:    
+                    profileName = input('Please right click your profile and paste "Path" here: ')
+                else:
+                    profileName = folderName
+                    
                 modrinthConfigPath = modrinthPath + os.path.sep + profileName + os.path.sep + 'profile.json'
             except:
                 modrinthPath = input('Unknown os, please manually paste your path to your modrinth profile here: ')
@@ -38,7 +42,7 @@ def modlistCreation():
             
         def readJson(modrinthConfig_path):
             try:
-                with open(modrinthConfig_path, encoding='utf-8') as config:
+                with open(modrinthConfig_path, 'r', encoding='utf-8') as config:
                         data = json.load(config)
                         
                 return data
@@ -50,7 +54,10 @@ def modlistCreation():
             md_hd = ''
             mod_type = None
             if prtype == 'mods':
-                mod_type = input('Are these server mods or client mods? (Enter "server" or "client"): ')
+                if packType == None:
+                    mod_type = input('Is this a client or server pack? (Enter "server" or "client"): ')
+                else:
+                    mod_type = packType
                 md_hd = f'# {mod_type.capitalize()} Pack\n' if mod_type.lower() == 'server' or mod_type.lower() == 'client' else None
                 
                 if md_hd == None:
@@ -121,6 +128,7 @@ def modlistCreation():
                 output_path = os.path.dirname(os.path.realpath(sys.argv[0]))
                 path_components = output_path.split(os.path.sep)
                 path_components.pop()
+                path_components.pop()
                 output_path = os.path.sep.join(path_components)
                 # Check if the output path exists
                 if not os.path.exists(output_path):
@@ -129,7 +137,7 @@ def modlistCreation():
                 return output_path
                     
         def saveMd(outputPath, contentType, markdown):
-            print('Saving file ...')
+            print('Saving modlist file ...')
             with open(f'{outputPath}{os.path.sep}{contentType.upper()}MODS.md', 'w', encoding='utf-8') as f:
                 f.write(markdown)
                 
@@ -149,7 +157,15 @@ def modlistCreation():
                     unknown.append(content)
                     
             return mods, shaders, resourcePacks, unknown
+         
+        def getContentNamesList(contents):
+                    names = []
+                    for item in contents:
+                        names.append(item.name)
                 
+                    return names
+                    
+                    
         modrinthCofigPath = getModrinthConfigPath()
 
         markdownHeader, contentType = mdHeader(header, 'mods')
@@ -166,10 +182,13 @@ def modlistCreation():
         outputPath = outputPath()
         saveMd(outputPath, contentType, markdown)
 
-        return modrinthCofigPath        
+        namesList = getContentNamesList(contents)
+
+        return modrinthCofigPath, contentType, namesList
     except Exception as e:
         print("An error occurred:", e)
         input("Press enter to quit")
-        
+'''        
 if __name__ == '__main__':
     modlistCreation()
+'''
