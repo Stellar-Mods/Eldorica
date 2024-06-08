@@ -2,7 +2,7 @@ import json
 import os
 
 def changelogCreation(newNamesList, profileName, version, savePath):
-    def readNamesList():
+    def readNamesList() -> list:
         names = []
         try:
             with open(f'{savePath}{profileName}changelogNamesList.pythonlist.json', 'r') as file:
@@ -45,14 +45,14 @@ def changelogCreation(newNamesList, profileName, version, savePath):
         for addedItem in addedContent:
             changlogText += f'- {addedItem}\n'
     else:
-        changlogText += '### No added content'
+        changlogText += '### No added content\n'
             
     if len(removedContent) != 0:
         changlogText += '\n### Removed Contents\n'
         for removedItem in removedContent:
             changlogText += f'- {removedItem}\n'
     else:
-        changlogText += '### No removed content'
+        changlogText += '### No removed content\n'
             
     oldChanglog = readChanglog()
     newChanglog = changlogText + oldChanglog

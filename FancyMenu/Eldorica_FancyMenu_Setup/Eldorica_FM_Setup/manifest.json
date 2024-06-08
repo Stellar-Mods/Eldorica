@@ -1,0 +1,38 @@
+{
+  "minecraft": {
+    "version": "1.20.4",
+    "modLoaders": [
+      {
+        "id": "fabric-0.15.7",
+        "primary": true
+      }
+    ]
+  },
+  "manifestType": "minecraftModpack",
+  "manifestVersion": 1,
+  "name": "Eldorica",
+  "author": "",
+  "files": [
+    {
+      "projectID": 416797,
+      "fileID": 5150315,
+      "required": true
+    },
+    {
+      "projectID": 306612,
+      "fileID": 5191708,
+      "required": true
+    },
+    {
+      "projectID": 367706,
+      "fileID": 5153195,
+      "required": true
+    },
+    {
+      "projectID": 938643,
+      "fileID": 5139711,
+      "required": true
+    }
+  ],
+  "overrides": "overrides"
+}

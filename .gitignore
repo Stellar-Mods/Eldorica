@@ -1,3 +1,9 @@
 
 *.pyc
 /maintainer-scripts/Exporting/__pycache__
+maintainer-scripts/Exporting/__pycache__/prepareExport.cpython-311.pyc
+maintainer-scripts/Exporting/__pycache__/prepareExport.cpython-311.pyc
+*.pyc
+/maintainer-scripts/Exporting/__pycache__
+maintainer-scripts/Exporting/__pycache__/modlistCreation.cpython-311.pyc
+maintainer-scripts/Exporting/__pycache__/prepareExport.cpython-311.pyc
